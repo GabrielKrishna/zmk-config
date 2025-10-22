@@ -35,17 +35,17 @@
                         bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
 // | TAB      | 1        | 2        | 3        | 4        | 5        | | 6        | 7        | 8        | 9        | 0        | ESC      |
+    &kp TAB    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp ESC
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
 // | CTRL     | BT1      | BT2      | BT3      | BT4      | BT5      | | LFT      | DWN      |  UP      | RGT      |          | ENT      |
+    &kp LCTRL  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans    &kp RET
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
 // | SHFT     | BTCLR    |          |          |          |          | |          |          |          |          |          | ALT      |
+    &kp LSHFT  &bt BT_CLR &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans     &kp LALT
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤ ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
 //                                  | GUI      |          | BSPC     | | SPC      |          | HYPER    |
+                                     &kp LGUI   &trans     &kp BSPC     &kp SPACE  &trans     &kp LC(LA(LS(LGUI)))
 //                                  ╰──────────┴──────────┴──────────╯ ╰──────────┴──────────┴──────────╯
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp ESC
-   &kp LCTRL &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &kp RET
-   &kp LSHFT  &bt BT_CLR       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &kp LALT
-                                    &kp LGUI     &trans       &kp BSPC      &kp SPACE  &trans   &kp LC(LA(LS(LGUI)))
                         >;
                 };
 
@@ -54,17 +54,17 @@
                         bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮ ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
 // | TAB      | !        | @        | #        | $        | %        | | ^        | &        | *        | (        | )        | ESC      |
+    &kp  TAB   &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR   &kp ESC
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
 // | CTRL     |          |          |          |          | '        | | -        | =        | [        | ]        | \        | `        |
+    &kp LCTRL  &trans     &trans     &trans     &trans     &kp SQT      &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH   &kp GRAVE
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
 // | SHFT     |          |          |          |          | "        | | _        | +        | {        | }        |"|"       | ~        |
+    &kp LSHFT  &trans     &trans     &trans     &trans     &kp DQT      &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC   &kp PIPE   &kp TILDE
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤ ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
 //                                  | GUI      |          | BSPC|    | |SPC       |          | HYPER    |
+                                     &kp LGUI   &trans     &kp BSPC     &kp SPACE  &trans     &kp LC(LA(LS(LGUI)))
 //                                  ╰──────────┴──────────┴──────────╯ ╰──────────┴──────────┴──────────╯
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp ESC
-   &kp LCTRL &trans   &trans &trans   &trans   &kp SQT     &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &kp DQT     &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp BSPC   &kp SPACE   &trans    &kp LC(LA(LS(LGUI)))
                         >;
                 };
         };
